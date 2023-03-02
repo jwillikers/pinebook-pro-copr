@@ -31,12 +31,6 @@ git checkout 056d5f6776e515f90bbbbead1be06857aaef17d0
 mkdir %{buildroot}/usr/lib/firmware/brcm -p
 # Bluetooth firmware
 install -Dm644 ${RPM_BUILD_DIR}/%{name}/BCM4345C5.hcd -t %{buildroot}/usr/lib/firmware/brcm/
-# Wifi firmware
-install -Dm644 ${RPM_BUILD_DIR}/%{name}/fw_bcm43456c5_ag.bin -t %{buildroot}/usr/lib/firmware/brcm/
-install -Dm644 ${RPM_BUILD_DIR}/%{name}/brcmfmac43456-sdio.clm_blob -t %{buildroot}/usr/lib/firmware/brcm/
-install -Dm644 ${RPM_BUILD_DIR}/%{name}/brcmfmac43456-sdio.AP6256.txt -t %{buildroot}/usr/lib/firmware/brcm/
-ln -s brcmfmac43456-sdio.AP6256.txt %{buildroot}/usr/lib/firmware/brcm/brcmfmac43456-sdio.txt
-ln -s brcmfmac43456-sdio.AP6256.txt %{buildroot}/usr/lib/firmware/brcm/brcmfmac43456-sdio.pine64,pinebook-pro.txt
 
 %files
 /usr/lib/firmware/
